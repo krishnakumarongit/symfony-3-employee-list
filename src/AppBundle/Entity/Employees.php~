@@ -1,0 +1,47 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Employees
+ *
+ * @ORM\Table(name="employees")
+ * @ORM\Entity
+ */
+class Employees
+{
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=100, nullable=false)
+     */
+    private $name;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="department", type="string", length=50, nullable=false)
+     */
+    private $department;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="since", type="date", nullable=false)
+     */
+    private $since;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+
+}
+
